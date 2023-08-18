@@ -20,7 +20,7 @@ class DashboardState extends State<Dashboard> {
 
   Future<void> fetchData() async {
     final String url =
-        dotenv.env["API_BASE_URL"]! + dotenv.env["LOGIN_ENDPOINT"]!;
+        dotenv.env["API_BASE_URL"]! + dotenv.env["DASHBOARD_ENDPOINT"]!;
 
     final String? token =
         Provider.of<TokenProvider>(context, listen: false).token;
@@ -49,7 +49,7 @@ class DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('API Dashboard'),
+        title: const Text('Dashboard'),
       ),
       body: Center(
         child: SingleChildScrollView(
